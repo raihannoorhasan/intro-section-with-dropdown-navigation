@@ -1,0 +1,334 @@
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap");
+
+:root {
+  /* Colors */
+  --almost-white: hsl(0, 0%, 98%);
+  --medium-gray: hsl(0, 0%, 41%);
+  --almost-black: hsl(0, 0%, 8%);
+  /* Font Size */
+  --fs-14: calc(1rem * 0.875);
+  --fs-16: 1rem;
+  --fs-18: calc(1rem * 1.125);
+  --fs-36: calc(1rem * 2.25);
+  --fs-80: calc(1rem * 5);
+  /* Sizing */
+}
+
+/* CSS RESET */
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+    2. Remove default margin
+  */
+* {
+  margin: 0;
+}
+/*
+    3. Allow percentage-based heights in the application
+  */
+html,
+body {
+  height: 100%;
+}
+/*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+    6. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+    7. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+    8. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+/*
+    9. Create a root stacking context
+  */
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* Utilities */
+.d-flex {
+  display: flex;
+}
+
+body {
+  font-family: "Epilogue", sans-serif;
+  overflow-x: hidden;
+}
+
+/* Header */
+.main-header {
+  min-height: 10vh;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.nav {
+  flex-grow: 1;
+  justify-content: space-between;
+}
+
+.nav-list {
+  list-style: none;
+  gap: 3rem;
+  position: relative;
+  align-items: center;
+  font-size: var(--fs-14);
+}
+
+.dropdown-list {
+  display: none;
+  list-style: none;
+  padding: 1rem 2.5rem 1rem 1.5rem;
+  background-color: var(--almost-white);
+  box-shadow: 0 0 50px 5px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 3rem;
+  border-radius: 0.8em;
+}
+
+.left {
+  left: -2rem;
+}
+
+.dropdown-list .nav-links {
+  padding: 0.3rem 0;
+}
+
+.nav-links:hover .dropdown-list {
+  display: block;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--medium-gray);
+  align-items: center;
+  gap: 0.8rem;
+  transition: color 200ms ease;
+}
+
+.nav-links a:hover,
+.btn:hover {
+  border-color: var(--almost-black);
+  color: var(--almost-black);
+}
+
+.nav-links a:not(:only-child)::after {
+  content: url(./images/icon-arrow-down.svg);
+  margin-left: 0.6rem;
+}
+
+.nav-links a:hover:not(:only-child)::after {
+  content: url(./images/icon-arrow-up.svg);
+  margin-left: 0.6rem;
+}
+
+.btn {
+  border: none;
+  background: none;
+  color: var(--medium-gray);
+  padding: 0.6rem 1rem;
+  cursor: pointer;
+  transition: all 200ms ease;
+}
+
+.btn.btn-register {
+  border: 2px solid var(--medium-gray);
+  border-radius: 1em;
+}
+
+.mobile-menu-overlay {
+  display: none;
+}
+
+.mobile-menu {
+  display: none;
+}
+
+/* Hero Section */
+.hero-section {
+  width: 80%;
+  margin-inline: auto;
+  min-height: 90vh;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* .left {
+  width: 50%;
+}
+
+.right-picture {
+  width: 50%;
+} */
+
+.left h1 {
+  font-size: var(--fs-80);
+  font-weight: bold;
+  line-height: 1;
+}
+
+.left p {
+  color: var(--medium-gray);
+  max-width: 70%;
+  padding: 2rem 0;
+}
+
+.clients {
+  width: 100%;
+  align-items: center;
+  padding: 2rem 0;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn-learn-more {
+  background-color: var(--almost-black);
+  color: var(--almost-white);
+  padding: 1rem 1.5rem;
+  border: none;
+  border-radius: 1em;
+  font-size: var(--fs-16);
+}
+
+@media screen and (max-width: 50rem) {
+  .main-header {
+    justify-content: space-between;
+  }
+
+  .nav {
+    display: block;
+    flex-direction: column;
+    background-color: var(--almost-white);
+    position: fixed;
+    inset: 0 0 0 30%;
+    z-index: 1000;
+    transform: translateX(100%);
+    transition: transform 500ms ease-in-out;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    padding: min(7rem, 10vh, 9rem) min(2rem, 20vw, 3rem);
+    gap: 1.5rem;
+    align-items: flex-start;
+    font-size: var(--fs-16);
+  }
+
+  .mobile-menu-overlay {
+    display: block;
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(1px);
+    transform: translateX(100%);
+    transition: transform 250ms ease-in-out;
+  }
+
+  .nav[data-visibility="true"],
+  .mobile-menu-overlay[data-overlay="true"] {
+    transform: translateX(0);
+  }
+
+  .mobile-menu {
+    display: block;
+    z-index: 9999;
+    background-image: url(./images/icon-menu.svg);
+    background-repeat: no-repeat;
+    width: 2rem;
+    aspect-ratio: 1;
+  }
+
+  .mobile-menu[aria-expanded="true"] {
+    background-image: url(./images/icon-close-menu.svg);
+  }
+
+  .account {
+    flex-direction: column;
+    width: 80%;
+    margin-inline: auto;
+  }
+
+  .dropdown-list {
+    box-shadow: none;
+    border-radius: 0;
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+
+  .hero-section {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .left {
+    order: 2;
+    text-align: center;
+    display: grid;
+    place-items: center;
+  }
+
+  .left br {
+    display: none;
+  }
+
+  .left h1 {
+    font-size: var(--fs-36);
+    padding: 2rem 0;
+  }
+
+  .left p {
+    padding: 0 1rem;
+    max-width: 100%;
+  }
+  .btn-learn-more {
+    margin: 2rem 0;
+  }
+  .clients {
+    gap: 0;
+    justify-content: space-between;
+    padding: 0 1rem;
+  }
+}

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Intro section with dropdown navigation</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <!-- <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style> -->
+
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="main-header d-flex">
+      <div class="logo">
+        <img src="./images/logo.svg" alt="" />
+      </div>
+      <div class="mobile-menu-overlay" data-overlay="false"></div>
+      <div class="mobile-menu" aria-expanded="false">
+        <span></span>
+      </div>
+
+      <nav data-visibility="false" class="nav d-flex">
+        <ul class="nav-list d-flex">
+          <li class="nav-links">
+            <a href="#">Features</a>
+            <ul class="dropdown-list left">
+              <li class="nav-links">
+                <a href="#" class="d-flex"
+                  ><img src="./images/icon-todo.svg" alt="" />Todo List</a
+                >
+              </li>
+              <li class="nav-links">
+                <a href="#" class="d-flex"
+                  ><img src="./images/icon-calendar.svg" alt="" />Calenders</a
+                >
+              </li>
+              <li class="nav-links">
+                <a href="#" class="d-flex"
+                  ><img src="./images/icon-reminders.svg" alt="" />Reminders</a
+                >
+              </li>
+              <li class="nav-links">
+                <a href="#" class="d-flex"
+                  ><img src="./images/icon-planning.svg" alt="" />Planning</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li class="nav-links">
+            <a href="#">Company</a>
+            <ul class="dropdown-list">
+              <li class="nav-links"><a href="#">History</a></li>
+              <li class="nav-links"><a href="#">Our Team</a></li>
+              <li class="nav-links"><a href="#">Blog</a></li>
+            </ul>
+          </li>
+          <li class="nav-links"><a href="#">Careers</a></li>
+          <li class="nav-links"><a href="#">About</a></li>
+        </ul>
+        <div class="account d-flex">
+          <button type="button" class="btn btn-login">Login</button>
+          <button type="button" class="btn btn-register">Register</button>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero-section d-flex">
+        <div class="left">
+          <h1>
+            Make <br />
+            remote work
+          </h1>
+          <p>
+            Get your team in sync, no matter your location. Streamline
+            processes, create team rituals, and watch productivity soar.
+          </p>
+          <button type="button" class="btn-learn-more">Learn more</button>
+          <picture class="clients d-flex">
+            <img src="./images/client-databiz.svg" alt="" />
+            <img src="./images/client-audiophile.svg" alt="" />
+            <img src="./images/client-maker.svg" alt="" />
+            <img src="./images/client-meet.svg" alt="" />
+          </picture>
+        </div>
+
+        <picture class="right-picture">
+          <source
+            media="(min-width: 50em)"
+            srcset="./images/image-hero-desktop.png"
+            sizes=""
+          />
+          <img src="./images/image-hero-mobile.png" alt="" />
+        </picture>
+      </section>
+    </main>
+  </body>
+</html>
