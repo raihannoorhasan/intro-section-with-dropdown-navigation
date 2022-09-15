@@ -90,6 +90,10 @@ h6 {
   display: flex;
 }
 
+.bg-almost-white {
+  background-color: var(--almost-white);
+}
+
 body {
   font-family: "Epilogue", sans-serif;
   overflow-x: hidden;
@@ -120,7 +124,7 @@ body {
   display: none;
   list-style: none;
   padding: 1rem 2.5rem 1rem 1.5rem;
-  background-color: var(--almost-white);
+  background-color: #fff;
   box-shadow: 0 0 50px 5px rgba(0, 0, 0, 0.1);
   position: absolute;
   top: 3rem;
@@ -230,15 +234,7 @@ body {
 .content p {
   color: var(--medium-gray);
   max-width: 70%;
-  padding: 2rem 0;
-}
-
-.clients {
-  width: 100%;
-  align-items: center;
-  padding: 2rem 0;
-  gap: 1rem;
-  flex-wrap: wrap;
+  padding: 3rem 0;
 }
 
 .btn-learn-more {
@@ -248,6 +244,15 @@ body {
   border: none;
   border-radius: 1em;
   font-size: var(--fs-16);
+  margin-bottom: 3rem;
+}
+
+.clients {
+  width: 100%;
+  align-items: center;
+  padding: 2rem 0;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
 
 @media screen and (max-width: 50rem) {
