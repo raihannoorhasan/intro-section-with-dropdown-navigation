@@ -135,7 +135,8 @@ body {
   padding: 0.3rem 0;
 }
 
-.nav-links:hover .dropdown-list {
+.nav-links:hover .dropdown-list,
+.nav-links:focus-within .dropdown-list {
   display: block;
 }
 
@@ -158,9 +159,26 @@ body {
   margin-left: 0.6rem;
 }
 
-.nav-links a:hover:not(:only-child)::after {
+.nav-links a:hover:not(:only-child)::after,
+.nav-links a:focus-within:not(:only-child)::after {
   content: url(./images/icon-arrow-up.svg);
   margin-left: 0.6rem;
+}
+
+.nav-links a:hover img {
+  animation: rotating 300ms both;
+}
+
+@keyframes rotating {
+  0% {
+    transform: rotate(10deg) scale(1.1);
+  }
+  50% {
+    transform: rotate(-10deg) scale(1.1);
+  }
+  100% {
+    transform: rotate(0) scale(1);
+  }
 }
 
 .btn {
