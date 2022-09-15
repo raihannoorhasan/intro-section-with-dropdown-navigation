@@ -103,8 +103,8 @@ body {
 .main-header {
   min-height: 10vh;
   align-items: center;
-  width: 90%;
   margin: 0 auto;
+  padding: 0 1.5rem;
 }
 
 .nav {
