@@ -10,6 +10,7 @@
   --fs-16: 1rem;
   --fs-18: calc(1rem * 1.125);
   --fs-36: calc(1rem * 2.25);
+  --fs-48: calc(1rem * 3.2);
   --fs-80: calc(1rem * 5);
   /* Sizing */
 }
@@ -251,6 +252,18 @@ body {
   flex-wrap: wrap;
 }
 
+@media screen and (max-width: 76rem) and (min-width: 50rem) {
+  .content h1 {
+    font-size: var(--fs-48);
+  }
+  .content p {
+    padding: 2rem 0;
+  }
+  .btn-learn-more {
+    margin-bottom: 2rem;
+  }
+}
+
 @media screen and (max-width: 50rem) {
   .main-header {
     justify-content: space-between;
@@ -345,11 +358,12 @@ body {
     max-width: 100%;
   }
   .btn-learn-more {
-    margin: 2rem 0;
+    margin-top: 2rem;
+    margin-bottom: 0;
   }
   .clients {
     gap: 0;
     justify-content: space-between;
-    padding: 0 1rem;
+    padding: 2rem 1.5rem;
   }
 }
