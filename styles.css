@@ -217,13 +217,9 @@ body {
   gap: 1rem;
 }
 
-/* .left {
-  width: 50%;
+.content {
+  width: 120%;
 }
-
-.right-picture {
-  width: 50%;
-} */
 
 .content h1 {
   font-size: var(--fs-80);
