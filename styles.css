@@ -328,6 +328,7 @@ body {
     text-align: center;
     display: grid;
     place-items: center;
+    width: 100%;
   }
 
   .content br {
