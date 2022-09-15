@@ -31,7 +31,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [https://github.com/raihannoorhasan/intro-section-with-dropdown-navigation]
 - Live Site URL: [https://raihannoorhasan.github.io/intro-section-with-dropdown-navigation/]
 
 ## My process

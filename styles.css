@@ -203,13 +203,13 @@ body {
   width: 50%;
 } */
 
-.left h1 {
+.content h1 {
   font-size: var(--fs-80);
   font-weight: bold;
   line-height: 1;
 }
 
-.left p {
+.content p {
   color: var(--medium-gray);
   max-width: 70%;
   padding: 2rem 0;
@@ -303,23 +303,23 @@ body {
     width: 100%;
   }
 
-  .left {
+  .content {
     order: 2;
     text-align: center;
     display: grid;
     place-items: center;
   }
 
-  .left br {
+  .content br {
     display: none;
   }
 
-  .left h1 {
+  .content h1 {
     font-size: var(--fs-36);
     padding: 2rem 0;
   }
 
-  .left p {
+  .content p {
     padding: 0 1rem;
     max-width: 100%;
   }
